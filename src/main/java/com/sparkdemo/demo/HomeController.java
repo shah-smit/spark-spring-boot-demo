@@ -12,9 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
     @GetMapping()
     public void doSomeSpark(){
-        SparkSession sparkSession = SparkSession.builder()
-                .sparkContext(new JavaSparkContext(new SparkConf().setAppName("Spark Demo").setMaster("local[8]")).sc())
-                .getOrCreate();
+
         log.info("somefin");
     }
 }
